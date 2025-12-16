@@ -216,30 +216,14 @@
         </div>
       </div>
       <div class="st-project st-project-carousel owl-carousel st-style1 st-owl-controler1">
-        <a href="#" class="st-single-project st-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s" data-src="{% static '/img/light-img/project1.jpg' %}">
+          {% for project in projects %}
+        <a href="#" class="st-single-project st-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s" data-src="{{ project.image.url }}">
           <div class="st-project-meta">
-            <h3>عنوان پروژه یک</h3>
-            <span>برندینگ</span>
+            <h3>{{ project.name }}</h3>
+            <span>{{ project.description }}</span>
           </div>
         </a>
-        <a href="#" class="st-single-project st-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.25s" data-src="{% static '/img/light-img/project2.jpg' %}">
-          <div class="st-project-meta">
-            <h3>عنوان پروژه یک</h3>
-            <span>برندینگ</span>
-          </div>
-        </a>
-        <a href="#" class="st-single-project st-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s" data-src="{% static '/img/light-img/project3.jpg' %}">
-          <div class="st-project-meta">
-            <h3>عنوان پروژه یک</h3>
-            <span>برندینگ</span>
-          </div>
-        </a>
-        <a href="#" class="st-single-project st-bg wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.35s" data-src="{% static '/img/light-img/project4.jpg' %}">
-          <div class="st-project-meta">
-            <h3>عنوان پروژه یک</h3>
-            <span>برندینگ</span>
-          </div>
-        </a>
+          {% endfor %}
         <!-- تکرار موارد مشابه -->
       </div>
     </div>

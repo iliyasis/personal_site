@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from projects.models import Project
 from services.models import Service, Statistics
 
 
@@ -7,5 +7,6 @@ from services.models import Service, Statistics
 def home(request):
     services = Service.objects.all()
     statistics = Statistics.objects.all().last()
-    context = {"services": services, "statistics": statistics}
+    projects = Project.objects.order_by('-id')[:4]
+    context = {"services": services, "statistics": statistics, "projects": projects}
     return render(request, "home/home.html", context)
