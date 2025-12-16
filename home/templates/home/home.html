@@ -144,27 +144,15 @@
       <div class="st-owl-controler3-hover">
         <div class="container">
           <div class="st-service-carousel owl-carousel st-style2 st-owl-controler3">
-            <div class="st-image-box st-style1 text-center wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
-              <a href="#" class="st-image"><img src="{% static '/img/light-img/service1.png' %}" alt="demo"></a>
-              <div class="st-image-box-info">
-                <h3 class="st-image-box-title"><a href="#">جلسه کسب‌وکار</a></h3>
-                <div class="st-image-box-text">جلسه زمانی است که دو یا چند نفر برای بحث درباره یک یا چند موضوع، اغلب در یک محیط رسمی یا تجاری گرد هم می‌آیند.</div>
-              </div>
-            </div>
-            <div class="st-image-box st-style1 text-center wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.25s">
-              <a href="#" class="st-image"><img src="{% static '/img/light-img/service2.png' %}" alt="demo"></a>
-              <div class="st-image-box-info">
-                <h3 class="st-image-box-title"><a href="#">تحلیل کسب‌وکار</a></h3>
-                <div class="st-image-box-text">تحلیل کسب‌وکار یک رشته تحقیقاتی برای شناسایی نیازهای تجاری و تعیین راه‌حل‌های کسب‌وکار است.</div>
-              </div>
-            </div>
-            <div class="st-image-box st-style1 text-center wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
-              <a href="#" class="st-image"><img src="{% static '/img/light-img/service3.png' %}" alt="demo"></a>
-              <div class="st-image-box-info">
-                <h3 class="st-image-box-title"><a href="#">رشد کسب‌وکار</a></h3>
-                <div class="st-image-box-text">نفوذ در بازار کلید رشد کسب‌وکار است. فرآیندهای توسعه کسب‌وکار برای ایجاد و اجرای رشد.</div>
-              </div>
-            </div>
+              {% for servic in services %}
+                  <div class="st-image-box st-style1 text-center wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                    <a href="#" class="st-image"><img src="{{ servic.image.url }}" alt="demo"></a>
+                    <div class="st-image-box-info">
+                      <h3 class="st-image-box-title"><a href="#">{{ servic.title }}</a></h3>
+                      <div class="st-image-box-text">{{ servic.description }}</div>
+                    </div>
+                  </div>
+              {% endfor %}
           </div>
         </div>
       </div>
@@ -184,28 +172,28 @@
           <div class="col-lg-3 col-sm-6">
             <div class="st-funfact text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
               <div class="st-funfact-icon"><i class="flaticon-rate"></i></div>
-              <h2 class="st-funfact-number st-counter">۹۹۹</h2>
+              <h2 class="st-funfact-number st-counter">{{ statistics.satisfied_customers }}</h2>
               <h3 class="st-funfact-title">مشتریان راضی</h3>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6">
             <div class="st-funfact text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.25s">
               <div class="st-funfact-icon"><i class="flaticon-code"></i></div>
-              <h2 class="st-funfact-number st-counter">۱۸۵</h2>
+              <h2 class="st-funfact-number st-counter">{{ statistics.website_created }}</h2>
               <h3 class="st-funfact-title">وبسایت ساخته شده</h3>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6">
             <div class="st-funfact text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
               <div class="st-funfact-icon"><i class="flaticon-laptop"></i></div>
-              <h2 class="st-funfact-number st-counter">۱۰۰</h2>
+              <h2 class="st-funfact-number st-counter">{{ statistics.specialist_expert }}</h2>
               <h3 class="st-funfact-title">کارشناس متخصص</h3>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6">
             <div class="st-funfact text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.35s">
               <div class="st-funfact-icon"><i class="flaticon-win"></i></div>
-              <h2 class="st-funfact-number st-counter">۲۰۰</h2>
+              <h2 class="st-funfact-number st-counter">{{ statistics.years_of_experience }}</h2>
               <h3 class="st-funfact-title">سال تجربه</h3>
             </div>
           </div>
