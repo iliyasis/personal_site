@@ -13,3 +13,9 @@ class Statistics(models.Model):
     website_created = models.IntegerField()
     specialist_expert = models.IntegerField()
     years_of_experience = models.IntegerField()
+
+class Skills(models.Model):
+    name = models.CharField(max_length=100)
+    percent = models.IntegerField(default=0)
+    def __str__(self):
+        return f"{self.name} ({self.percent})"

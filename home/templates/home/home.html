@@ -248,51 +248,17 @@
               <p>مهارت توانایی انجام یک کار با نتایج تعیین شده اغلب در مدت زمان معین است. مهارت معمولاً به محرک‌ها و موقعیت‌های محیطی خاصی برای ارزیابی بیشتر نیاز دارد.</p>
             </div>
             <div class="st-progressbar-wrap">
+                {% for skill in skills %}
               <div class="st-single-progressbar">
                 <div class="st-progressbar-meta">
-                  <h3 class="st-progressbar-title">توسعه وب</h3>
-                  <div class="st-progressbar-percentage">۹۰%</div>
+                  <h3 class="st-progressbar-title">{{ skill.name }}</h3>
+                  <div class="st-progressbar-percentage">{{ skill.percent }}%</div>
                 </div>
-                <div class="st-progressbar" data-progress-percentage="90">
+                <div class="st-progressbar" data-progress-percentage="{{ skill.percent }}">
                   <div class="st-progressbar-in wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"></div>
                 </div>
               </div>
-              <div class="st-single-progressbar">
-                <div class="st-progressbar-meta">
-                  <h3 class="st-progressbar-title">طراحی وب</h3>
-                  <div class="st-progressbar-percentage">۹۵%</div>
-                </div>
-                <div class="st-progressbar" data-progress-percentage="95">
-                  <div class="st-progressbar-in wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"></div>
-                </div>
-              </div>
-              <div class="st-single-progressbar">
-                <div class="st-progressbar-meta">
-                  <h3 class="st-progressbar-title">HTML / CSS</h3>
-                  <div class="st-progressbar-percentage">۸۵%</div>
-                </div>
-                <div class="st-progressbar" data-progress-percentage="85">
-                  <div class="st-progressbar-in wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"></div>
-                </div>
-              </div>
-              <div class="st-single-progressbar">
-                <div class="st-progressbar-meta">
-                  <h3 class="st-progressbar-title">وردپرس</h3>
-                  <div class="st-progressbar-percentage">۸۰%</div>
-                </div>
-                <div class="st-progressbar" data-progress-percentage="80">
-                  <div class="st-progressbar-in wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"></div>
-                </div>
-              </div>
-              <div class="st-single-progressbar">
-                <div class="st-progressbar-meta">
-                  <h3 class="st-progressbar-title">فتوشاپ</h3>
-                  <div class="st-progressbar-percentage">۹۵%</div>
-                </div>
-                <div class="st-progressbar" data-progress-percentage="95">
-                  <div class="st-progressbar-in wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s"></div>
-                </div>
-              </div>
+                {% endfor %}
             </div>
           </div>
         </div>
@@ -300,14 +266,14 @@
     </section>
     <!-- پایان بخش مهارت -->
 
-    <!-- شروع بخش تیم -->
+    <!-- شروع بخش تیم
     <section class="st-team-wrap st-section" id="team">
       <div class="container">
         <div class="st-section-heading st-style2 text-center">
           <h2>تیم خلاق</h2>
           <div class="st-seperator">
             <div class="st-seperator-left-bar wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-            <img src="{% static '/img/dark-img/seperator-icon.png' %}" alt="demo" class="st-seperator-icon">
+            <img src="{ static '/img/dark-img/seperator-icon.png' %}" alt="demo" class="st-seperator-icon">
             <div class="st-seperator-right-bar wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
           </div>
           <p>اعضای تیم باید یاد بگیرند چگونه به یکدیگر کمک کنند. یک تیم زمانی بیشتر از <br>مجموعه‌ای از افراد می‌شود که احساس قوی.</p>
@@ -318,7 +284,7 @@
           <div class="st-member-carousel owl-carousel st-style2 st-owl-controler3">
             <div class="st-team-member text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
               <div class="st-member-img">
-                <img src="{% static '/img/light-img/team1.png' %}" alt="demo">
+                <img src="{ static '/img/light-img/team1.png' %}" alt="demo">
               </div>
               <div class="st-member-info">
                 <h3 class="st-member-name">رادنی آرتیچوک</h3>
@@ -331,12 +297,11 @@
                 </ul>
               </div>
             </div>
-            <!-- تکرار موارد مشابه -->
           </div>
         </div>
       </div>
     </section>
-    <!-- پایان بخش تیم -->
+     پایان بخش تیم -->
 
     <!-- شروع بخش CTA -->
     <section class="st-cta-wrap st-gray-bg">
