@@ -1,0 +1,62 @@
+{% extends "home/base.html" %}
+
+{%load static %}
+
+{% block content %}
+<!-- شروع عنوان صفحه -->
+  <section class="st-page-header st-bg" data-src="{% static 'img/light-img/page-header-bg.jpg' %}">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="st-page-header-text">
+            <h1>اخبار و وبلاگ ما</h1>
+            <ul class="st-breadcam">
+              <li><a href='index.html'>خانه</a></li>
+              <li>وبلاگ با نوار کناری راست</li>
+            </ul>
+          </div>
+        </div><!-- .col -->
+      </div>
+    </div>
+  </section>
+  <!-- پایان عنوان صفحه -->
+
+  <!-- شروع بخش وبلاگ -->
+  <div class="st-blog-wrap st-section" id="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <article class="post">
+          	<header class="entry-header">
+          		<div class="post-thumbnail">
+          			<img src="{% static 'img/light-img/blog-details1.jpg' %}" alt="demo">
+          		</div>
+          		<div class="post-details-wrap-outer">
+          			<div class="post-details-wrap">
+          				<h2 class="entry-title">اداره کسب‌وکارهای کوچک</h2>
+          				<div class="byline">
+          					<span class="author">
+          						<a href="blog-details-no-sidebar" class=""><i class="fa fa-user"></i>مدیر</a>
+          					</span>
+          					<span class="posted-on"><i class="fa fa-calendar"></i>۲۱ فوریه ۲۰۱۸</span>
+          					<span><i class="fa fa-tag"></i><a href="blog-details-no-sidebar#">خدمات پشتیبانی،</a> <a href="blog-details-no-sidebar#">بازاریابی دیجیتال</a></span>
+          				</div>
+          			</div>
+          		</div><!-- .post-details-wrap-outer -->
+          	</header><!-- .entry-header -->
+          	<div class="entry-content">
+          		<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+          		<p>کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+          		<p>در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+          		<blockquote>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</blockquote>
+          		<p>در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+          	</div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- پایان بخش وبلاگ -->
+  <hr>
+
+{% endblock content %}
